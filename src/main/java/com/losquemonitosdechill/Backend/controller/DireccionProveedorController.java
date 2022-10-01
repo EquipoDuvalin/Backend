@@ -1,4 +1,4 @@
 package com.losquemonitosdechill.Backend.controller;
 
-public class VentaCanceladaArticulo {
+public class DireccionProveedorController {
 }

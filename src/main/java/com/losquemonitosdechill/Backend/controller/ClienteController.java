@@ -1,4 +1,4 @@
 package com.losquemonitosdechill.Backend.controller;
 
-public class Venta {
+public class ClienteController {
 }
