@@ -1,1 +1,22 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
+        show_sql: true
+        format_sql: true
+        jdbc.batch_size: 10
+        order_updates: true
+        batch_version_data: true
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/pos_admin?serverTimezone=UTC}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
 
+security:
+  ignored=/**
