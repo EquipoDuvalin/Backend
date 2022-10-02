@@ -1,0 +1,28 @@
+version: '1'
+
+services:
+  backend-uttt:
+    image: 'backend-uttt:0.0.0'
+    build:
+      context: .
+    container_name: backend-uttt
+    depends_on:
+      - db-postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-postgres:5432/pos_admin
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=1407
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  db-postgres:
+    image: 'postgres'
+    container_name: db-postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=1407
+      - POSTGRES_DB=pos_admin
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
