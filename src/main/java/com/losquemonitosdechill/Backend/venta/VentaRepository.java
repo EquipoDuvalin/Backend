@@ -1,4 +1,6 @@
 package com.losquemonitosdechill.Backend.venta;
 
-public interface VentaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface VentaRepository extends JpaRepository<Venta, Integer> {
 }
