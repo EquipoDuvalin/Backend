@@ -26,7 +26,7 @@ public class ArticuloController {
   public ResponseEntity<Articulo> save(@RequestBody Articulo articulo) {
     Articulo newArticulo = articuloServices.create(articulo);
     try {
-      return ResponseEntity.created(new URI("/api/cliente" + newArticulo.getCod_asociado())).body(newArticulo);
+      return ResponseEntity.created(new URI("/api/articulo" + newArticulo.getCod_asociado())).body(newArticulo);
     } catch (Exception e) {
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
