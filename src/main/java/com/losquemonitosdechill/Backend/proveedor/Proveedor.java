@@ -13,7 +13,8 @@ import java.sql.Date;
 public class Proveedor implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private String id_proveedor;
+  private int id_proveedor;
+
   private String rfc;
   private String razon_social;
   private String nombre_contacto;
