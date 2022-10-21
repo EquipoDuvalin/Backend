@@ -142,7 +142,7 @@ public class ArticuloControllerTest {
     articuloService.create(articuloTwo);
 
     ResultActions response = mockMvc
-        .perform(delete("/api/articulo/delete/{id}", articuloTwo.getCod_asociado()));
+        .perform(delete("/api/articulo/delete/{id}", articuloTwo.getCod_barras()));
     response.andExpect(status().isOk());
 
   }
