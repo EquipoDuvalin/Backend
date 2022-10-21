@@ -52,7 +52,6 @@ public class ArticuloControllerTest {
     articuloOne.setUtilidad(1);
     articuloOne.setPrecio_venta(1);
     articuloOne.setUtilidad(1);
-    articuloOne.setPrecio_venta(1);
     articuloOne.setTipo_articulo("a23c");
     articuloOne.setStock(1);
     articuloOne.setStock_min(1);
