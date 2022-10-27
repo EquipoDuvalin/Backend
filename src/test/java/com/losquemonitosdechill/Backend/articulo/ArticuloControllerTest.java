@@ -40,6 +40,7 @@ public class ArticuloControllerTest {
   @Test
   void add() throws Exception {
     // setup
+    articuloOne.setCod_asociado(1);
     articuloOne.setId_clasificacion(1);
     articuloOne.setCod_interno("12345as");
     articuloOne.setCod_descripcion("a2c3");
@@ -51,7 +52,6 @@ public class ArticuloControllerTest {
     articuloOne.setUtilidad(1);
     articuloOne.setPrecio_venta(1);
     articuloOne.setUtilidad(1);
-    articuloOne.setPrecio_venta(1);
     articuloOne.setTipo_articulo("a23c");
     articuloOne.setStock(1);
     articuloOne.setStock_min(1);
@@ -72,6 +72,7 @@ public class ArticuloControllerTest {
         .content(objectMapper.writeValueAsString(articuloOne)));
 
     response.andDo(print()).andExpect(status().isCreated())
+            .andExpect(jsonPath("$.cod_asociado", is(articuloOne.getCod_asociado())))
         .andExpect(jsonPath("$.id_clasificacion", is(articuloOne.getId_clasificacion())))
         .andExpect(jsonPath("$.cod_interno", is(articuloOne.getCod_interno())))
         .andExpect(jsonPath("$.cod_descripcion", is(articuloOne.getCod_descripcion())))
@@ -110,6 +111,7 @@ public class ArticuloControllerTest {
 
   @Test
   void deleteArticulo() throws Exception {
+    articuloTwo.setCod_asociado(2);
     articuloTwo.setId_clasificacion(1);
     articuloTwo.setCod_interno("12345as");
     articuloTwo.setCod_descripcion("a2c3");
@@ -139,7 +141,7 @@ public class ArticuloControllerTest {
     articuloService.create(articuloTwo);
 
     ResultActions response = mockMvc
-        .perform(delete("/api/articulo/delete/{id}", articuloTwo.getCod_asociado()));
+        .perform(delete("/api/articulo/delete/{id}", articuloTwo.getCod_barras()));
     response.andExpect(status().isOk());
 
   }
@@ -147,6 +149,7 @@ public class ArticuloControllerTest {
   @Test
   void ArticuloById() throws Exception {
     // Setup
+    articuloOne.setCod_asociado(1);
     articuloOne.setId_clasificacion(1);
     articuloOne.setCod_interno("12345as");
     articuloOne.setCod_descripcion("a2c3");

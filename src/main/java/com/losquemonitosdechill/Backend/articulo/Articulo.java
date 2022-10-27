@@ -14,6 +14,7 @@ import java.sql.Date;
 public class Articulo implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer cod_barras;
   private Integer cod_asociado;
   private int id_clasificacion;
   private String cod_interno;
