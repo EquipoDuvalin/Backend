@@ -3,6 +3,8 @@ package com.losquemonitosdechill.Backend.articulo;
 import java.sql.Date;
 import java.time.LocalDate;
 
+import com.losquemonitosdechill.Backend.Tienda.articulo.Articulo;
+import com.losquemonitosdechill.Backend.Tienda.articulo.ArticuloService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

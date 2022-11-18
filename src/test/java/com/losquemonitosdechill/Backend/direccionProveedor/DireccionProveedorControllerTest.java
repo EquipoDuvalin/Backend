@@ -1,6 +1,8 @@
 package com.losquemonitosdechill.Backend.direccionProveedor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.losquemonitosdechill.Backend.Tienda.direccionProveedor.DireccionProveedor;
+import com.losquemonitosdechill.Backend.Tienda.direccionProveedor.DireccionProveedorService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -9,10 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
-import java.sql.Date;
-
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;

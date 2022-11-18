@@ -2,8 +2,8 @@ package com.losquemonitosdechill.Backend.unidadMedida;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import unidadMedida.UnidadMedida;
-import unidadMedida.UnidadMedidaService;
+import com.losquemonitosdechill.Backend.Tienda.unidadMedida.UnidadMedida;
+import com.losquemonitosdechill.Backend.Tienda.unidadMedida.UnidadMedidaService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

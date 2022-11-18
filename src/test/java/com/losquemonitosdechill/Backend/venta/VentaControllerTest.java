@@ -1,6 +1,8 @@
 package com.losquemonitosdechill.Backend.venta;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.losquemonitosdechill.Backend.Tienda.venta.Venta;
+import com.losquemonitosdechill.Backend.Tienda.venta.VentaService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
